@@ -1,1 +1,1 @@
-# A Cool website made by andre and jordan
+# A Cool website made by Pugmeowla
