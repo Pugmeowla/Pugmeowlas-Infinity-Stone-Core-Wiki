@@ -119,3 +119,7 @@ div.content {
   transform: scale(1.5); 
 }
 
+img { 
+  image-rendering: optimizeSpeed;            
+  image-rendering: pixelated;              
+}
