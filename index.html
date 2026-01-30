@@ -14,20 +14,49 @@
 
 
   <div class="sidebar">
-    <a class="active" href="index.html">Home</a>
-    <a  href="stones.html">Stones</a>
-    <a href="structures.html">Structures</a>
-    <a href="items.html">Items</a>
-    <a href="powers.html">Powers</a>
-    <a href="crafting_recipes.html">Crafting Recipes</a>
+<a class="active" href="index.html">Home</a>
+    <button class="dropdown-btn">
+  Infinity Stones
+  <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <a href="stones/general.html">General</a>
+<a href="stones/power_stone.html">Power Stone</a>
+<a href="stones/space_stone.html">Space Stone</a>
+<a href="stones/reality_stone.html">Reality Stone</a>
+<a href="stones/soul_stone.html">Soul Stone</a>
+<a href="stones/time_stone.html">Time Stone</a>
+<a href="stones/mind_stone.html">Mind Stone</a>
+</div>
+<a href="infinity_gauntlet.html">Infinity Gauntlet</a>
+<a href="cosmi-rod.html">Cosmi-Rod</a>
+<button class="dropdown-btn">
+  Structures
+  <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+  <a href="structures/general.html">General</a>
+<a href="structures/morag_temple.html">Morag Temple</a>
+<a href="structures/norse_village.html">Norse Village</a>
+<a href="structures/aether_chamber.html">Aether Chamber</a>
+<a href="structures/sanctum_sanctorum.html">Sanctum Sanctorum</a>
+<a href="structures/vormirs_edge.html">Vormir's Edge</a>
+<a href="structures/sanctuary.html">Sanctuary</a>
+<a href="structures/crashed_kree_ship.html">Crashed Kree Ship</a>
+<a href="structures/uru_meteor.html">Uru Meteor</a>
+<a href="structures/dwarf_star_meteor.html">Dwarf Star Meteor</a>
+
+</div>
+<a href="planets.html">Planets</a>
+<a href="item.html">Other Items</a>
+<a href="generator.html">Infinity Generator</a>
   </div>
+
+  <script> /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */ var dropdown = document.getElementsByClassName("dropdown-btn"); var i; for (i = 0; i < dropdown.length; i++) { dropdown[i].addEventListener("click", function() { this.classList.toggle("active"); var dropdownContent = this.nextElementSibling; if (dropdownContent.style.display === "block") { dropdownContent.style.display = "none"; } else { dropdownContent.style.display = "block"; } }); } </script>
+
 
 <div class="content">
-
-
-  <div>
-    <img src="gauntlet.webp" alt="logo" width="200" height=""/>
-  </div>
+  
   <h1>Pugmeowla's Infintiy Stone Core Wiki</h1>
   
   

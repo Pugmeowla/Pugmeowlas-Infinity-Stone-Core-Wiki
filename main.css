@@ -1,125 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-body {
-    text-align: center;
-    background-color: rgb(244, 166, 111);
-  }
-
-  h1 {
-    font-size: 70px;
-    line-height: 1;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    font-family: Ubuntu, sans-serif;
-    text-shadow: 4px 4px 8px #000000;
-  }
-  
-  h2 {
-    font-size: 36px;
-    color: rgb(255, 255, 255);
-    font-family: Ubuntu, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-  }
-
-  h3 {
-    font-size: 14px;
-    color: rgb(255, 255, 255);
-    font-family: Ubuntu, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-  }
-  
-  p1 {
-    font-size: 36px;
-    line-height: 1.5;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Ubuntu, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-  }
-
-  p2 {
-    font-size: 20px;
-    line-height: 1.5;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Ubuntu, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-  }
-
-  p3 {
-    font-size: 15px;
-    line-height: 1.5;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Ubuntu, sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-  }
-  
-  span {
-    font-size: 64px;
-    line-height: 2;
-    color: white;
-  }
-
-  a {
-    font-size: 20px;
-    line-height: 1.5;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Ubuntu, sans-serif;
-    text-decoration: none
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: rgb(228, 143, 82);
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+:root{
+--bg-main:rgb(244,166,111);
+--bg-sidebar:rgb(228,143,82);
+--bg-sidebar-hover:rgb(222,129,62);
+--bg-sidebar-active:rgb(254,125,32);
+--text-light:#fff;
+--text-dark:#000;
+--shadow-lg:4px 4px 8px #000;
+--shadow-md:2px 2px 4px #000;
+--sidebar-width:200px;
+--font-main:"Ubuntu",sans-serif
 }
 
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
+body{
+margin:0;
+font-family:var(--font-main);
+background:var(--bg-main)
 }
 
-.sidebar a.active {
-  background-color: rgb(254, 125, 32);
-  color: white;
+h1{
+font-size:70px;
+line-height:1;
+text-transform:uppercase;
+color:var(--text-light);
+text-shadow:var(--shadow-lg)
 }
 
-.sidebar a:hover:not(.active) {
-  background-color: rgb(222, 129, 62);
-  color: white;
+h2{
+font-size:36px;
+color:var(--text-light);
+text-shadow:var(--shadow-md)
 }
 
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+h3{
+font-size:14px;
+color:var(--text-light);
+text-shadow:var(--shadow-md)
 }
 
-.zoom {
-  transition: transform .2s;
-  margin: 0 auto;
+.text-xl{
+font-size:36px;
+line-height:1.5;
+color:var(--text-light);
+text-shadow:var(--shadow-md)
 }
 
-.zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
+.text-md{
+font-size:20px;
+line-height:1.5;
+color:var(--text-light);
+text-shadow:var(--shadow-md)
 }
 
-img { 
-  image-rendering: optimizeSpeed;            
-  image-rendering: pixelated;              
+.text-sm{
+font-size:15px;
+line-height:1.5;
+color:var(--text-light);
+text-shadow:var(--shadow-md)
+}
+
+span{
+font-size:64px;
+line-height:2;
+color:var(--text-light)
+}
+
+a{
+font-size:20px;
+text-decoration:none
+}
+
+.content a{
+color:var(--text-light);
+text-shadow:var(--shadow-md)
+}
+
+.container{
+display:flex;
+justify-content:space-between
+}
+
+.content{
+margin-left:var(--sidebar-width);
+padding:20px;
+text-align:center
+}
+
+.sidebar{
+width:var(--sidebar-width);
+height:100%;
+position:fixed;
+background:var(--bg-sidebar);
+overflow:auto
+}
+
+.sidebar a,
+.sidebar .dropdown-btn{
+display:block;
+width:100%;
+padding:16px;
+font-size:20px;
+font-family:var(--font-main);
+color:var(--text-dark);
+background:none;
+border:0;
+text-align:left;
+cursor:pointer;
+text-shadow:none
+}
+
+.sidebar a.active,
+.sidebar .dropdown-btn.active{
+background:var(--bg-sidebar-active);
+color:var(--text-light)
+}
+
+.sidebar a:hover:not(.active),
+.sidebar .dropdown-btn:hover:not(.active){
+background:var(--bg-sidebar-hover);
+color:var(--text-light)
+}
+
+.dropdown-container{
+display:none;
+background:var(--bg-sidebar-hover)
+}
+
+.dropdown-container a{
+padding-left:32px;
+font-size:18px
+}
+
+.fa-caret-down{
+float:right
 }
