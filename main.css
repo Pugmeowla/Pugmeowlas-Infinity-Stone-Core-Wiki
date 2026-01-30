@@ -95,43 +95,64 @@ background:var(--bg-sidebar);
 overflow:auto
 }
 
-.sidebar a,
-.sidebar .dropdown-btn{
-display:block;
-width:100%;
-padding:16px;
-font-size:20px;
-font-family:var(--font-main);
-color:var(--text-dark);
-background:none;
-border:0;
-text-align:left;
-cursor:pointer;
-text-shadow:none
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100%;
+  position: fixed;
+  background: var(--bg-sidebar);
+  overflow: auto;
 }
 
-.sidebar a.active,
-.sidebar .dropdown-btn.active{
-background:var(--bg-sidebar-active);
-color:var(--text-light)
+/* Links inside sidebar */
+.sidebar a {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 20px;
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
 }
 
-.sidebar a:hover:not(.active),
-.sidebar .dropdown-btn:hover:not(.active){
-background:var(--bg-sidebar-hover);
-color:var(--text-light)
+/* Dropdown buttons */
+button.dropdown-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 20px;
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
 }
 
-.dropdown-container{
-display:none;
-background:var(--bg-sidebar-hover)
+button.dropdown-btn:hover {
+  background-color: var(--bg-sidebar-hover);
+  color: var(--text-light);
 }
 
-.dropdown-container a{
-padding-left:32px;
-font-size:18px
+button.dropdown-btn.active {
+  background-color: var(--bg-sidebar-active);
+  color: var(--text-light);
 }
 
-.fa-caret-down{
-float:right
+/* Dropdown container */
+.dropdown-container {
+  display: none;
+  background: var(--bg-sidebar-hover);
+}
+
+.dropdown-container a {
+  padding-left: 32px;
+  font-size: 18px;
+}
+
+/* Caret icon */
+.fa-caret-down {
+  float: right;
 }

@@ -53,7 +53,18 @@
 <a href="generator.html">Infinity Generator</a>
   </div>
 
-
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+for (var i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function () {
+    var content = this.nextElementSibling;
+    var open = content.style.display === "block";
+    content.style.display = open ? "none" : "block";
+    this.classList.toggle("active", !open);
+    this.setAttribute("aria-expanded", !open);
+  });
+}
+</script>
 
 
 
