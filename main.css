@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-:root{
---bg-main:rgb(244,166,111);
---bg-sidebar:rgb(228,143,82);
---bg-sidebar-hover:rgb(222,129,62);
---bg-sidebar-active:rgb(254,125,32);
---text-light:#fff;
---text-dark:#000;
---shadow-lg:4px 4px 8px #000;
---shadow-md:2px 2px 4px #000;
---sidebar-width:200px;
---font-main:"Ubuntu",sans-serif
+:root {
+  /* Backgrounds – LIGHTER PURPLES */
+  --bg-main: #C77DFF;            /* light cosmic purple */
+  --bg-sidebar: #B66DFF;         /* slightly deeper */
+  --bg-sidebar-hover: #A85CFF;   /* hover */
+  --bg-sidebar-active: #9A4BFF;  /* active */
+
+  /* Text */
+--text-light: #E6B84C;
+        /* soft gold */
+  --text-dark: #2B143F;          /* deep purple-black */
+
+  /* Shadows */
+  --shadow-lg: 3px 3px 8px rgba(43,20,63,0.6);
+  --shadow-md: 2px 2px 4px rgba(43,20,63,0.6);
+
+  /* Layout */
+  --sidebar-width: 200px;
+  --font-main: "Ubuntu", sans-serif;
 }
 
 body{
@@ -82,9 +90,14 @@ justify-content:space-between
 }
 
 .content{
-margin-left:var(--sidebar-width);
-padding:20px;
-text-align:center
+  margin-left: var(--sidebar-width);
+  padding: 20px;
+  text-align: left;
+}
+
+.content iframe {
+  display: block;
+  margin: 20px auto;
 }
 
 .sidebar{

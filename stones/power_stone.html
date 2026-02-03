@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-  <link rel="stylesheet" href="../main.css">
 <head>
-<title>Foreward</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <title>Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
 <body>
+ <div class="sidebar">
+  <a class="active" href="../index.html">Home</a>
 
+  <button class="dropdown-btn" aria-expanded="false">
+    Infinity Stones
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="../stones/general.html">General</a>
+    <a href="../stones/power_stone.html">Power Stone</a>
+    <a href="../stones/space_stone.html">Space Stone</a>
+    <a href="../stones/reality_stone.html">Reality Stone</a>
+    <a href="../stones/soul_stone.html">Soul Stone</a>
+    <a href="../stones/time_stone.html">Time Stone</a>
+    <a href="../stones/mind_stone.html">Mind Stone</a>
+  </div>
+
+  <a href="../infinity_gauntlet.html">Infinity Gauntlet</a>
+  <a href="../cosmi-rod.html">Cosmi-Rod</a>
+
+  <button class="dropdown-btn" aria-expanded="false">
+    Structures
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="../structures/general.html">General</a>
+    <a href="../structures/morag_temple.html">Morag Temple</a>
+    <a href="../structures/norse_village.html">Norse Village</a>
+    <a href="../structures/aether_chamber.html">Aether Chamber</a>
+    <a href="../structures/sanctum_sanctorum.html">Sanctum Sanctorum</a>
+    <a href="../structures/vormirs_edge.html">Vormir's Edge</a>
+    <a href="../structures/sanctuary.html">Sanctuary</a>
+    <a href="../structures/crashed_kree_ship.html">Crashed Kree Ship</a>
+    <a href="../structures/uru_meteor.html">Uru Meteor</a>
+    <a href="../structures/dwarf_star_meteor.html">Dwarf Star Meteor</a>
+  </div>
+
+  <a href="../planets.html">Planets</a>
+  <a href="../item.html">Other Items</a>
+  <a href="../generator.html">Infinity Generator</a>
+</div>
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+for (var i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function () {
+    var content = this.nextElementSibling;
+    var open = content.style.display === "block";
+    content.style.display = open ? "none" : "block";
+    this.classList.toggle("active", !open);
+    this.setAttribute("aria-expanded", !open);
+  });
+}
+</script>
 
 
   
@@ -20,7 +72,7 @@
 
 <div class="content">
   
-  <h1>Pugmeowla's Infintiy Stone Core Wiki</h1>
+  <h1>Power Stone</h1>
   
   
 </div>
